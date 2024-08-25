@@ -1,5 +1,5 @@
-mport firebase from 'firebase/compat/app';
-import 'firebase/compat/firestore1';
+import firebase from 'firebase/compat/app';
+import 'firebase/compat/firestore';
 
 const firebaseConfig = {
   apiKey: "AIzaSyBEyByvJq-1i5euRn6Oh1pC-m9x1eB0eBs",
@@ -10,12 +10,10 @@ const firebaseConfig = {
   appId: "1:928685046602:web:6c74ea002b160783d9dfb3"
 };
 
-
 firebase.initializeApp(firebaseConfig);
 
-
 import React, { useEffect, useState } from 'react';
-import {View, Text, FlatList} from 'react-native';
+import { View, Text, FlatList, Image, StyleSheet } from 'react-native';
 
 export default function App() {
   const [nomes, setNomes] = useState([]);
@@ -27,7 +25,7 @@ export default function App() {
 
       const data = [];
       snapshot.forEach((doc) => {
-        data.push({id: doc.id, ...doc.data() });
+        data.push({ id: doc.id, ...doc.data() });
       });
 
       setNomes(data);
@@ -37,15 +35,30 @@ export default function App() {
   }, []);
 
   return (
-    <View style={{flex:1, justifyContent:'center',alignItems:'center'}}>
+    <View style={styles.container}>
       <Text>Lista de nomes:</Text>
       <FlatList
-      data={nomes}
-      keyExtractor={(item) => item.id}
-      renderItem={({item}) => (
-        </View>
-      )}
+        data={nomes}
+        keyExtractor={(item) => item.id}
+        renderItem={({ item }) => (
+          <View style={styles.item}>
+            <Text>{item.nome}</Text>
+          </View>
+        )}
       />
-      </View>
+    </View>
   );
 }
+
+const styles = StyleSheet.create({
+  container: {
+    flex: 1,
+    justifyContent: 'center',
+    alignItems: 'center',
+  },
+  item: {
+    padding: 10,
+    borderBottomWidth: 1,
+    borderBottomColor: '#ccc',
+  },
+});
