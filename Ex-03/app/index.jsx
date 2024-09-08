@@ -1,11 +1,15 @@
 import React from 'react';
-import { Text, View, Pressable, StyleSheet, Image } from 'react-native';
+import { Text, View, Pressable, StyleSheet,ImageBackground, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
 
 export default function index() {
   const navigation = useNavigation();
 
   return (
+    <ImageBackground
+    source={{ uri: 'https://todabandeira.com.br/wp-content/uploads/2023/10/bandeira-da-africa-do-sul.jpg'}}
+    style={styles.backgroundColor}
+    >
     <View style={styles.container}>
       <Pressable
         style={styles.button}
@@ -21,10 +25,18 @@ export default function index() {
         style={styles.image}
       />
     </View>
+    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
+  Imagebackground: {
+  flex: 1,
+  backgroundColor: rgba(0, 0, 0, 0.048),
+  resizeMode: 'cover',
+  justifyContent: 'center',
+  alignItems: 'center',
+  },
   container: {
     flex: 1,
     justifyContent: 'center',
