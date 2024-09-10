@@ -23,23 +23,23 @@ export default function index() {
        <Image
         source={{ uri: 'https://w7.pngwing.com/pngs/916/379/png-transparent-flag-of-south-africa-map-flag-miscellaneous-flag-map.png' }}
         style={styles.image}
-        />
+      />
         <Image
         source={{ uri: 'https://media.istockphoto.com/id/483348293/pt/vetorial/bandeira-da-%C3%A1frica-do-sul.jpg?s=612x612&w=0&k=20&c=2iVnQN1te8IF8MpXmNEYXJgsf2ZWpeN7dJUDumWTt_g=' }}
         style={styles.image}
-        />
+      />
         <Image
         source={{ uri: 'https://democraciasocialista.org.br/wp-content/uploads/2016/08/1200408-300x220.jpg' }}
         style={styles.image}
-        />
+      />
         <Image
         source={{ uri: 'https://static.historiadomundo.com.br/2022/08/selo-mandela-klerk.jpg' }}
         style={styles.image}
-        />
+      />
         <Image
         source={{ uri: 'https://c.files.bbci.co.uk/EC5B/production/_116570506_gettyimages-2659675.jpg' }}
         style={styles.image}
-        />
+      />
 
 
     </View>
