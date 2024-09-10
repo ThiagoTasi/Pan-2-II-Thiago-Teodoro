@@ -1,20 +1,15 @@
 import React from 'react';
-import { Text, View, Pressable, StyleSheet,ImageBackground, Image } from 'react-native';
+import { Text, View, Pressable, StyleSheet, Image } from 'react-native';
 import { useNavigation } from '@react-navigation/native';
-import Africa from '../components/Africa';
 
-export default function Index() {
+export default function index() {
   const navigation = useNavigation();
 
   return (
-    <ImageBackground
-    source={{ uri: 'https://todabandeira.com.br/wp-content/uploads/2023/10/bandeira-da-africa-do-sul.jpg'}}
-    style={styles.ImageBackground}
-    >
     <View style={styles.container}>
       <Pressable
         style={styles.button}
-        onPress={() => navigation.navigate('Africa')}
+        onPress={() => navigation.navigate('africa')}
       >
         <Text style={styles.buttonText}>Go to Africa</Text>
       </Pressable>
@@ -25,20 +20,11 @@ export default function Index() {
         source={{ uri: 'https://images03.brasildefato.com.br/69c85ca1608808c4af912912b1fd6ff4.jpeg' }}
         style={styles.image}
       />
-      
     </View>
-    </ImageBackground>
   );
 }
 
 const styles = StyleSheet.create({
-  ImageBackground: {
-  flex: 1,
-  backgroundColor: 'rgba(0, 0, 0, 0.048)',
-  resizeMode: 'cover',
-  justifyContent: 'center',
-  alignItems: 'center',
-  },
   container: {
     flex: 1,
     justifyContent: 'center',

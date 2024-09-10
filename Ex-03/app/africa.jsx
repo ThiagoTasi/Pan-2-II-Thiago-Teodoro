@@ -1,6 +1,7 @@
 import React from 'react';
 import { View, Text, StyleSheet } from 'react-native';
-export default function Africa() {
+
+export default function africa() {
   return (
     <View style={styles.container}>
       <Text style={styles.title}>Welcome to Africa</Text>
@@ -19,8 +20,5 @@ const styles = StyleSheet.create({
   title: {
     fontSize: 24,
   },
-
+  backgound
 });
-
-
-    
