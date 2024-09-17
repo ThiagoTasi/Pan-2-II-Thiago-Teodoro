@@ -7,6 +7,7 @@ export default function index() {
 
   return (
     <View style={styles.container}>
+      
       <Pressable
         style={styles.button}
         onPress={() => navigation.navigate('africa')}
